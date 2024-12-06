@@ -1,0 +1,198 @@
+---
+import CardProduct from "./CardProduct.astro";
+---
+
+<main>
+  <section>
+    <div>
+      <CardProduct
+        imgSrc="/product/Gold.png"
+        imgAlt="iPhone 12"
+        name="iPhone 12 Pro"
+        color="Golden"
+        quantity={1}
+        price={999.0}
+      />
+      <CardProduct
+        imgSrc="/product/Apple-watch.png"
+        imgAlt="Apple Watch"
+        name="Apple Watch"
+        color="Blue"
+        quantity={1}
+        price={399.0}
+      />
+      <CardProduct
+        imgSrc="/product/iMac.png"
+        imgAlt="iMac"
+        name="iMac"
+        color="Green"
+        quantity={1}
+        price={1199.0}
+      />
+    </div>
+    <hr />
+    <aside>
+      <form>
+        <input type="text" placeholder="Enter coupon code" />
+        <button>Apply Coupon</button>
+      </form>
+      <section>
+        <article>
+          <h4>Sub total</h4>
+          <span>$2597.00</span>
+        </article>
+        <article>
+          <h4>Tax</h4>
+          <span>$623.28</span>
+        </article>
+        <article>
+          <h4>Total</h4>
+          <span>$3220.28</span>
+        </article>
+      </section>
+    </aside>
+  </section>
+  <section>
+    <form action="">
+      <h1>Contact Information</h1>
+      <label>
+        <span>First & Last name</span>
+        <input type="text" placeholder="Enter first & last name" />
+      </label>
+      <label>
+        <span>Email Address</span>
+        <input type="email" placeholder="Enter email address" />
+      </label>
+      <div>
+        <label>
+          <span>Country</span>
+          <select>
+            <option value="finland">Finland</option>
+            <option value="united-tates">United States</option>
+            <option value="canada">Canada</option>
+            <option value="mexico">Mexico</option>
+          </select>
+        </label>
+        <label>
+          <span>Postal Code</span>
+          <input type="number" placeholder="Enter postal code" />
+        </label>
+      </div>
+      <button>Continue</button>
+    </form>
+  </section>
+</main>
+
+<style>
+  main {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: row;
+    max-width: 1240px;
+    padding: 1rem;
+  }
+  main > section {
+    width: 50%;
+    padding: 1rem 2rem;
+  }
+  main > section:first-child {
+    background-color: #d2d5da;
+    border-radius: 2.5rem 0 0 2.5rem;
+  }
+  main > section:last-child {
+    background-color: white;
+    border-radius: 0 2.5rem 2.5rem 0;
+    padding-bottom: 9rem;
+  }
+  aside > form {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+  }
+  aside > form > input {
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 0.5rem;
+    border: 1px solid #d2d5da;
+    font-size: 1rem;
+    width: 66%;
+  }
+  aside > form > button {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #1d1d1f;
+    color: white;
+    font-size: 1rem;
+  }
+  section > article {
+    margin: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    line-height: 0;
+    height: 2rem;
+  }
+  aside > section {
+    padding: 1rem 0;
+  }
+  h1 {
+    font-size: 1rem;
+    padding-bottom: 2rem;
+  }
+  label {
+    display: flex;
+    flex-direction: column;
+    margin: 1rem 0;
+  }
+  label > span {
+    font-size: 0.875em;
+    font-weight: 500;
+  }
+  label > input, label > select {
+    padding: 1rem;
+    margin: 0.5rem 0;
+    border-radius: 0.5rem;
+    border: 1px solid #d2d5da;
+    font-size: 1rem;
+    background-color: #f3f4f6;
+  }
+  form > div {
+    display: flex;
+    justify-content: space-between;
+  }
+  form > div > label {
+    width: 48%;
+  }
+  section > form > button {
+    padding: 0.5rem 1rem;
+    margin: 0.5rem 0;
+    border-radius: 0.5rem;
+    border: none;
+    background-color: #1d1d1f;
+    color: white;
+    font-size: 1rem;
+    width: 100%;
+    height: 3rem;
+  }
+  @media(max-width: 900px) {
+    main {
+      flex-direction: column;
+      padding: 0 3rem;
+      margin-bottom: 2rem;
+    }
+    main > section {
+      width: min(100%, 540px);
+    }
+    main > section:first-child {
+      border-radius: 2.5rem 2.5rem 0 0;
+    }
+    main > section:last-child {
+      border-radius: 0 0 2.5rem 2.5rem;
+      padding-bottom: 2rem;
+    }
+  }
+</style>
